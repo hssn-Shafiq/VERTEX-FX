@@ -20,9 +20,9 @@ morgan.token("host", function (req, res) {
 
 app.use(cors());
 
-const port = process.env.PORT;
+const port = process.env.PORT || 5000;
 
 app.use("/user", user);
 app.use("/market", market);
 
-app.listen(port, () => console.log(`server listening on port ${port}`));
+app.listen(port, () => console.log(`Server listening on port ${port}`));
